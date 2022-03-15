@@ -9,8 +9,10 @@ import Home from "./pages/Home";
 import PrivateRouter from "./Components/PrivateRouter";
 import PublicRouter from "./Components/PublicRouter";
 import Register from "./Components/SIGNPAGE/Register";
+import { ProfileProvider } from "./context/Profile.context";
 function App() {
   return (
+    <ProfileProvider>
     <Switch>
 
        <Route exact path="/">
@@ -29,6 +31,7 @@ function App() {
         <Register/>
       </Route> 
     </Switch>
+    </ProfileProvider>
   )
 }
 

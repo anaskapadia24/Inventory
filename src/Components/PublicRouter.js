@@ -1,9 +1,10 @@
 import React from 'react'
 import { Route } from 'react-router-dom'
 import { Redirect } from 'react-router-dom'
+import { useProfile } from '../context/Profile.context'
 
 function PublicRouter({children, ...routeProps}) {
-    const profile = false
+    const profile = useProfile()
     if (profile)
     {
         return <Redirect to="/home"/>
