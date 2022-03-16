@@ -11,10 +11,12 @@ function PublicRouter({children, ...routeProps}) {
             <Loader center vertical size="md" content="Loading" speed='slow'/>
         </Container>
     }
-    if (isLoading && !profile)
+    if (profile && !isLoading)
     {
         return <Redirect to="/home"/>
     }
+
+    
     return (
         <Route {...routeProps}>
         {children}

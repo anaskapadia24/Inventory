@@ -5,32 +5,32 @@ const Profilecontext = createContext()
 export const  ProfileProvider = ({children}) =>{
     const [profile,setProfile] = useState(null)
     const [isLoading, setisLoading] = useState(true)
-    useEffect(()=> {
+    useEffect(()=>{
         auth.onAuthStateChanged(authObj=>{
-       console.log(authObj)
-        if(authObj)
-        {
-
-            db.ref(`/profiles/${authObj.uid}`).on("value",(snap)=>{
-                 const {Name, CreatedAt} = snap.val();
-                //  console.log(profiledata)
-                 const data = {
+           console.log(authObj)
+           
+           if(authObj)
+           {
+               db.ref(`/profiles/${authObj.uid}`).on("value",(snap)=>{
+                   const {Name, CreatedAt} = snap.val();
+                   const data = {
                        Name,
                        CreatedAt,
-                       email: authObj.displayemail,
-                       uid: authObj.uid
-                      }
-                      setProfile(data)
-                      setisLoading(false)
-            })
-        }
-        else{
-            setProfile(null)
-            // setisLoading(false)
-        }
-        })
-    }
-    
+                       uid: authObj.uid,
+                       email: authObj.email
+                   }
+                   setProfile(data)
+                   setisLoading(false)
+               })
+           }
+           else
+           {
+               setProfile(null)
+               setisLoading(false)
+           }
+         
+       })
+   },[]
     )
     return(
         <Profilecontext.Provider value={{profile, isLoading}}>
