@@ -10,6 +10,7 @@ import PrivateRouter from "./Components/PrivateRouter";
 import PublicRouter from "./Components/PublicRouter";
 import Register from "./Components/SIGNPAGE/Register";
 import { ProfileProvider } from "./context/Profile.context";
+
 function App() {
   return (
     <ProfileProvider>
