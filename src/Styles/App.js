@@ -1,15 +1,15 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
-import StartupPage from "./pages/StartupPage";
+import StartupPage from "../pages/StartupPage";
 import 'rsuite/dist/styles/rsuite-default.css';
-import './Styles/main.scss'
-import './App.css'
-import Signpage from "./Components/SIGNPAGE/Signpage";
-import Home from "./pages/Home";
-import PrivateRouter from "./Components/PrivateRouter";
-import PublicRouter from "./Components/PublicRouter";
-import Register from "./Components/SIGNPAGE/Register";
-import { ProfileProvider } from "./context/Profile.context";
+import '../Styles/main.scss'
+import '../App.css'
+import Signpage from "../Components/SIGNPAGE/Signpage";
+import Home from "../pages/Home";
+import PrivateRouter from "../Components/PrivateRouter";
+import PublicRouter from "../Components/PublicRouter";
+import Register from "../Components/SIGNPAGE/Register";
+import { ProfileProvider } from "../context/Profile.context";
 
 
 function App() {
