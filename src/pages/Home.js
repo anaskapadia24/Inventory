@@ -1,8 +1,13 @@
 import React from 'react'
+import Dashboard from '../Components/DASHBOARD/Dashboard'
+
 
 function Home() {
   return (
-    <div>Home</div>
+  <div className=''>
+    <Dashboard/>
+    </div>
+
   )
 }
 

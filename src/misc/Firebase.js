@@ -2,15 +2,14 @@ import firebase from 'firebase/app';
 import 'firebase/auth'
 import 'firebase/database'
 const Config = {
-    apiKey: "AIzaSyBtwu1lF0UtkY_PVVNLH8TxEbzLbLI5N6o",
-    authDomain: "stocks-management-9495e.firebaseapp.com",
-    databaseURL: "https://stocks-management-9495e-default-rtdb.asia-southeast1.firebasedatabase.app",
-    projectId: "stocks-management-9495e",
-    storageBucket: "stocks-management-9495e.appspot.com",
-    messagingSenderId: "158745224275",
-    appId: "1:158745224275:web:743318e3f438c8a4a292a6"
-  };
-
+  apiKey: "AIzaSyASkSBh9VPSWPv7XMmSST9vWemC9RpjX78",
+  authDomain: "stocks-app-8efa4.firebaseapp.com",
+  databaseURL: "https://stocks-app-8efa4-default-rtdb.firebaseio.com",
+  projectId: "stocks-app-8efa4",
+  storageBucket: "stocks-app-8efa4.appspot.com",
+  messagingSenderId: "297341407314",
+  appId: "1:297341407314:web:acb567558460b47195cf8b"
+};
   const app = firebase.initializeApp(Config)
   export const auth = app.auth()
   export const db = app.database()
