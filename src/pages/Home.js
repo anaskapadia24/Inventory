@@ -3,12 +3,14 @@ import Dashboard from '../Components/DASHBOARD/Dashboard'
 
 
 function Home() {
-  return (
-  <div className=''>
-    <Dashboard/>
-    </div>
+    return ( <
+        div className = '' >
+        <
+        Dashboard / >
+        <
+        /div>
 
-  )
+    )
 }
 
 export default Home

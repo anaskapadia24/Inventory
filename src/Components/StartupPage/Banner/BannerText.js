@@ -4,11 +4,11 @@ import styled from 'styled-components'
 import FadeIn from 'react-fade-in/lib/FadeIn';
 function BannerText(props) {
     return (
-        <div>
+        <div className='Banner-centr'>
             <TextBanner>
                 <Fades transitionDuration="500">
                 <div className='Nav_Head'>
-                <h1>{props.head}<br/>{props.head1}</h1>
+                <h1>{props.head}</h1>
                 </div>
                 <div className='Nav_Text'>
                 <p>{props.summary}</p>
@@ -25,38 +25,33 @@ function BannerText(props) {
 export default BannerText
 
 const TextBanner = styled.div`
-width: 50vw;
+/* border: 2px solid green; */
+width:85vw;
 height: 400px;
 display: flex;
 justify-content: center;
+/* align-items: center; */
 flex-direction: column;
-.Nav_Head{
-    user-select:none;
-    display: block;
-    text-align: center;
-    h1{
-      font-weight: 500;
-    }
-}
-.Nav_Text{
-    margin-top: 12px;
-    color: #c4990c;
-    font-size: 19px;
-    user-select:none;
-    font-weight: bolder;
-    display: block;
-    text-align: center;
-}
+margin-top:22%;
 .Nav_Btn{
-    display: inline-block;
+      border: 2px solid white; 
+      display: inline-block;
     margin-top: 20px;
-    display: block;
-    text-align: center;
+    border-radius:5px;
     Button{
+     
         font-size: 20px;
+         color: white;
+        // background-color:#e5a023; 
+        background:none;
+       
+  
+    }
+    &:hover{
         color: white;
-        background-color:#e5a023;
-        margin-right :30px ;
+        background-color: #c4990c;
+        border: 2px solid #c4990c;
+        transition: 0.8s all ease-in-out;
     }
 }
 `;

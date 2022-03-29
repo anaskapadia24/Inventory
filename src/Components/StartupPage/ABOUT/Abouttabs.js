@@ -50,6 +50,7 @@ function Abouttabs() {
     return (
         // TABS FOR ABOUT PAGE
         <TabsComponent>
+            <div className="Abouttab-All">
             <div className="Head">
             <h2>Multiple Investment Opportunities</h2>
             <p>Long term investors, pro traders or part-time traders can <br/>choose across various asset classes and create your<br/> customised portfolio. All from one platform</p>
@@ -57,10 +58,10 @@ function Abouttabs() {
             {/* TABS HEADING */}
             <Tabs className="M-tabs">
                 <TabList className="tabs-list" style={{ fontSize: "22px" }}>
-                    <Tab>Stocks</Tab>
-                    <Tab>Mutual Funds</Tab>
-                    <Tab>IPOs</Tab>
-                    <Tab>Future & Options</Tab>
+                    <Tab ><img src="//assets-netstorage.groww.in/website-assets/prod/1.6.5/build/client/images/stockHome.af2af225.svg" width="39" height="39" alt="Stocks - Groww"/>Stocks</Tab>
+                    <Tab><img src="//assets-netstorage.groww.in/website-assets/prod/1.6.5/build/client/images/mfHome.af668dea.svg" width="39" height="39" alt="MF - Groww"/>Mutual Funds</Tab>
+                    <Tab><img src="//assets-netstorage.groww.in/web-assets/billion_groww_desktop/prod/build/client/images/ipoHome.b071ba94.svg" width="39" height="39" alt="IPO"/>IPOs</Tab>
+                    <Tab><img src="//assets-netstorage.groww.in/website-assets/prod/1.6.5/build/client/images/optionHome.5e98a896.svg" width="39" height="39" alt="Futures n Options - Groww"/>Future & Options</Tab>
                 </TabList>
                 <hr className='line' />
                 {/* TABS LISTS AND ITS DATA */}
@@ -76,8 +77,10 @@ function Abouttabs() {
                             </div>
                         </TabPanel>
                     </div>
+                
                 ))}
             </Tabs>
+        </div>
         </TabsComponent>
 
     )

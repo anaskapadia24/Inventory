@@ -1,0 +1,55 @@
+
+#notfound .notfound{
+    position: absolute;
+    left: 20%;
+    top: 50%;
+}
+
+.notfound{
+    max-width: 900px;
+    width: 100%;
+    line-height: 1.4;
+    text-align: center;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.notfound .notfound-404{
+    position: absolute;
+    height: 100px;
+    bottom: 180%;
+    left: 22%;
+    z-index: -1;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    
+}
+
+.notfound .notfound-404 h1{
+    color: #ececec;
+    font-weight: 900;
+    font-size: 276px;
+    margin: 0px;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    -webkit-transform: translate(-50% -50%);
+    -ms-transform: translateX(-50% -50%);
+    transform: translateX(-50% -50%);
+}
+
+.notfound a{
+font-size: 20px;
+text-decoration: none;
+text-transform: uppercase;
+background: #189cf0;
+display: inline-block;
+padding: 5px 20px;
+border: 2px solid transparent;
+border-radius: 40px;
+color: #ececec;
+font-weight: 400;
+-webkit-transition: 0.2s all;
+transition: 0.2s all;
+}

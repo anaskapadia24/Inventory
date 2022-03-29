@@ -33,7 +33,7 @@ function About(props) {
 export default About
 const Abouts = styled.div`
 .headm{
-  height: 600px;
+  height: 400px;
     display: flex;
     justify-content: center;
     align-items: center;

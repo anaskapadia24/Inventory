@@ -10,7 +10,8 @@ import PrivateRouter from "../Components/PrivateRouter";
 import PublicRouter from "../Components/PublicRouter";
 import Register from "../Components/SIGNPAGE/Register";
 import { ProfileProvider } from "../context/Profile.context";
-
+import '../All.css'
+import Errorpage from "../ERROR/Errorpage";
 
 function App() {
   return (
@@ -32,6 +33,10 @@ function App() {
       <Route path="/Register">
         <Register/>
       </Route> 
+
+      <Route>
+      <Errorpage/>
+      </Route>
     </Switch>
     </ProfileProvider>
   )
