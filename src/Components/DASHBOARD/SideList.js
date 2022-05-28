@@ -6,7 +6,7 @@ const SideList = (props) => {
     return (
         <ListItem>
         <li>
-            <Link className='list' to="" >
+            <Link className='list' to={props.to} >
             <div className='menu-icon'>
                 <Icon size='2x' className="icon" icon={props.icon} />
             </div>

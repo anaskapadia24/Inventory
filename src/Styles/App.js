@@ -12,35 +12,44 @@ import Register from "../Components/SIGNPAGE/Register";
 import { ProfileProvider } from "../context/Profile.context";
 import '../All.css'
 import Errorpage from "../ERROR/Errorpage";
-
+import Dashboard from "../Components/DASHBOARD/Dashboard";
 function App() {
+  const [Users, setUsers] = useState("")
+
+  const OnusernameChange = (value) => {
+    setUsers(value)
+    console.log(value)
+  }
   return (
     <ProfileProvider>
-    <Switch>
+      <Switch>
 
-       <Route exact path="/">
-      <StartupPage/>
-      </Route>
+        <Route exact path="/">
+          <StartupPage />
+        </Route>
 
-      <PublicRouter exact path="/signin">
-      <Signpage/>
-      </PublicRouter>
+        <PublicRouter exact path="/signin">
+          <Signpage Users={Users} />
+        </PublicRouter>
 
-      <PrivateRouter path="/home">
-      <Home/>
-      </PrivateRouter>
+        <PrivateRouter path="/Dashboard">  
+          <Home />
+        </PrivateRouter>
 
-      <Route path="/Register">
-        <Register/>
-      </Route> 
-
-      <Route>
-      <Errorpage/>
-      </Route>
-    </Switch>
+        <Route path="/Register">
+          <Register Users={Users} OnusernameChange={OnusernameChange} />
+        </Route>
+        
+        <Route path="***">
+          <Error />
+        </Route>
+        <Route path="/Dashboard/***">
+          <Error/>
+        </Route>
+      </Switch>
     </ProfileProvider>
+
   )
 }
 
 export default App;
-
